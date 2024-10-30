@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-black-900 via-black-800 to-green-800 text-white">
+    <div className="flex flex-col min-h-screen bg-black text-white relative">
       <header className="container mx-auto px-4 py-6 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <span className="text-5xl md:text-6xl font-bold text-left font-figtree">KOBE</span>
@@ -17,8 +17,6 @@ export default function LandingPage() {
           <Link className="hover:text-gray-300 transition-colors transform hover:scale-105" href="#why-choose-KOBE">
             Why Choose KOBE
           </Link>
-
-          {/* Menú desplegable para Socials */}
           <div className="relative group">
             <button className="hover:text-gray-300 transition-colors transform hover:scale-105">
               Socials
@@ -32,8 +30,6 @@ export default function LandingPage() {
               </Link>
             </div>
           </div>
-
-          {/* Menú desplegable para About */}
           <div className="relative group">
             <button className="hover:text-gray-300 transition-colors transform hover:scale-105">
               About
@@ -51,15 +47,13 @@ export default function LandingPage() {
       </header>
 
       <main className="flex-grow">
-        {/* Título y subtítulo de la página */}
         <section className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Your intelligent ally in the Web3 world</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            The all-in-one AI-Powered solution to simplifys smart contract development on Solana
+            The all-in-one AI-Powered solution to simplify smart contract development on Solana
           </p>
         </section>
 
-        {/* Sección "Bring Your Ideas to Life" */}
         <section id="features" className="container mx-auto px-4 py-20 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">From imagination to implementation</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -69,7 +63,7 @@ export default function LandingPage() {
               { title: "Compilation and Deployment", icon: Globe, description: "Directly compile and deploy contracts to the Solana blockchain" },
               { title: "Real-Time Blockchain Info", icon: Layers, description: "Access up-to-date blockchain data with Retrieval-Augmented Generation (RAG)" },
             ].map((feature, index) => (
-              <Card key={index} className="bg-green-800 bg-opacity-50 border-none transform transition-transform hover:scale-105">
+              <Card key={index} className="bg-gray-800 bg-opacity-50 border-none transform transition-transform hover:scale-105">
                 <CardContent className="p-6">
                   <feature.icon className="h-8 w-8 mb-4" />
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
@@ -80,14 +74,13 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Sección "Why choose KOBE" */}
         <section id="why-choose-KOBE" className="container mx-auto px-4 py-20 bg-gray-900 bg-opacity-50 rounded-lg">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Why choose KOBE</h2>
           <div className="space-y-6 text-left">
             {[
               { title: "Fine Tuned Models for Each Task", icon: Code, description: "Optimized models specifically for blockchain development tasks." },
               { title: "Automated Testing", icon: Shield, description: "KOBE ensures your contracts are secure and tested automatically." },
-              { title: "Deployment on Chain", icon: Globe, description: "Easily deploy smart contracts on chain after your smartcontract is created." },
+              { title: "Deployment on Chain", icon: Globe, description: "Easily deploy smart contracts on chain after your smart contract is created." },
               { title: "Create your website", icon: Monitor, description: "Develop your own website with KOBE to grow your web3 project." },
               { title: "Access to Updated Documentation", icon: Book, description: "Stay informed with the latest blockchain documentation through KOBE." },
               { title: "Dependencies Solver", icon: CheckCircle, description: "Automatically solves dependencies using linear programming." },
@@ -103,7 +96,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Sección "3 Pilares de KOBE" */}
         <section className="container mx-auto px-4 py-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">KOBE empowers you with</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -121,7 +113,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Llamado a la acción */}
         <section className="container mx-auto px-4 py-20 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to transform your Solana development workflow?
@@ -130,15 +121,8 @@ export default function LandingPage() {
             Join our waiting list and be the first to experience the power of AI-driven blockchain development.
           </p>
           <div className="flex justify-center">
-            <Link
-              href="https://getwaitlist.com/waitlist/20693"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                size="lg"
-                className="text-lg px-8 py-6 flex items-center justify-center bg-gray-300 text-black hover:bg-gray-400"
-              >
+            <Link href="https://getwaitlist.com/waitlist/20693" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="text-lg px-8 py-6 flex items-center justify-center bg-gray-500 text-black hover:bg-gray-400">
                 <span>I want to stay informed</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
