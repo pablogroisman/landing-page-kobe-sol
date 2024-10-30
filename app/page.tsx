@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Cpu, Zap, Shield, Globe, Layers, Book, Code, CheckCircle, Clock, ShieldCheck, UserCheck, Monitor } from "lucide-react";
+import { ArrowRight, Zap, Shield, Globe, Layers, Book, Code, CheckCircle, Clock, ShieldCheck, UserCheck, Monitor } from "lucide-react";
 import Link from "next/link";
-import { title } from "process";
 
 export default function LandingPage() {
   return (
